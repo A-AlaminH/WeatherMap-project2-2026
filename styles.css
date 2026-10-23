@@ -1,0 +1,62 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  color: #172b3a;
+  background: #f2f6f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --navy: #102a43;
+  --blue: #176b87;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+.page { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 18px; }
+.header { margin-bottom: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--navy); font-size: 2rem; font-weight: 700; text-decoration: none; text-shadow: 0 2px 5px #102a4320; }
+.brand-icon { color: #e3a126; }
+.header p { margin: 7px 0 0; color: #627786; }
+.search-panel { padding: 20px; background: #fff; border: 1px solid #dbe5eb; border-radius: 14px; box-shadow: 0 5px 18px #102a4310; }
+.search-form { display: flex; gap: 10px; }
+.search-form input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #b8c9d3; border-radius: 9px; outline: none; transition: border-color .2s, box-shadow .2s; }
+.search-form input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #176b8720; }
+.primary-button { padding: 0 20px; color: white; background: var(--navy); border: 0; border-radius: 9px; cursor: pointer; transition: background .2s, transform .2s; }
+.primary-button:hover { background: var(--blue); transform: translateY(-1px); }
+.primary-button:disabled { cursor: wait; opacity: .7; }
+.status-row { display: flex; align-items: center; gap: 10px; min-height: 28px; }
+.status { font-size: .92rem; color: #627786; }
+.status.error { color: #a62c36; }
+.status.success { color: #26744c; }
+.spinner { width: 17px; height: 17px; border: 2px solid #dbe5eb; border-top-color: var(--blue); border-radius: 50%; animation: spin .7s linear infinite; }
+.spinner[hidden] { display: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.favorites-heading { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.favorites-heading h2 { margin: 0; font-size: .95rem; }
+#favorite-count { color: #708390; font-size: .8rem; }
+.favorites { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.favorite-chip { padding: 7px 11px; color: #254052; background: #f0f5f7; border: 1px solid #d5e1e7; border-radius: 999px; cursor: pointer; transition: background .2s, border-color .2s; }
+.favorite-chip:hover { background: #e2eff3; border-color: #a8c7d2; }
+.favorite-chip .remove { margin-left: 6px; color: #728590; }
+.empty-favorites { margin: 0; color: #778995; font-size: .86rem; }
+.map-section { margin-top: 18px; }
+#map { height: 70vh; min-height: 360px; border: 4px solid var(--navy); border-radius: 14px; box-shadow: 0 8px 22px #102a4320; overflow: hidden; }
+.map-note { margin: 9px 2px; color: #6c7e89; font-size: .82rem; }
+footer { padding: 7px 2px 0; color: #70818c; font-size: .78rem; }
+.weather-popup { min-width: 205px; font-family: "Roboto", sans-serif; }
+.popup-title { margin: 0; color: var(--navy); font-size: 1.05rem; }
+.popup-description { margin: 0; color: #657986; text-transform: capitalize; }
+.popup-main { display: flex; align-items: center; gap: 7px; margin: 3px 0; }
+.popup-main img { width: 54px; height: 54px; }
+.popup-temp { color: var(--navy); font-size: 1.8rem; font-weight: 700; }
+.popup-details { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 6px 0 10px; color: #536a79; font-size: .82rem; }
+.popup-actions { display: flex; gap: 7px; }
+.popup-actions button { padding: 7px 9px; color: white; background: var(--navy); border: 0; border-radius: 6px; cursor: pointer; font-size: .8rem; }
+.popup-actions button:hover { background: var(--blue); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 560px) {
+  .page { width: min(100% - 20px, 1100px); padding-top: 20px; }
+  .search-panel { padding: 14px; }
+  .search-form { flex-direction: column; }
+  .search-form input, .primary-button { min-height: 46px; }
+  #map { height: 70vh; min-height: 330px; }
+}
