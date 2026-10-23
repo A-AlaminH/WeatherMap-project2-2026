@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Find current weather anywhere in the world with WeatherMap.">
+  <title>WeatherMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="WeatherMap home"><span class="brand-icon" aria-hidden="true">☀</span> WeatherMap</a>
+      <p>Current conditions, wherever you are.</p>
+    </header>
+
+    <section class="search-panel" aria-label="Find weather">
+      <form id="search-form" class="search-form">
+        <label class="sr-only" for="location">City or place</label>
+        <input id="location" name="location" type="search" placeholder="Search a city or place…" autocomplete="off" required>
+        <button class="primary-button" type="submit">Get Weather</button>
+      </form>
+      <div class="status-row" aria-live="polite">
+        <span id="status" class="status"></span>
+        <span id="spinner" class="spinner" role="status" aria-label="Loading" hidden></span>
+      </div>
+      <div class="favorites-heading">
+        <h2>Favorite places</h2>
+        <span id="favorite-count"></span>
+      </div>
+      <div id="favorites" class="favorites" aria-label="Favorite places"></div>
+    </section>
+
+    <section class="map-section" aria-label="Weather map">
+      <div id="map" aria-label="Interactive map"></div>
+      <p class="map-note">Search for a location to see its current weather.</p>
+    </section>
+    <footer>Weather data by OpenWeather · Map © OpenStreetMap contributors</footer>
+  </main>
+</body>
+</html>
