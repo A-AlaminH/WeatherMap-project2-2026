@@ -28,3 +28,7 @@ A small, responsive single page weather app built with semantic HTML, CSS, and v
 - **Google Fonts (Roboto)** supplies the page font.
 
 Geocoding and weather requests run asynchronously with `fetch` and `async`/`await`. The form prevents full page navigation. Favorites are stored in browser local storage.
+
+---
+
+Name: Ahmed Abdelkarim Ahmed
