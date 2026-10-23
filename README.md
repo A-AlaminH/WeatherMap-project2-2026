@@ -2,6 +2,16 @@
 
 A small, responsive single page weather app built with semantic HTML, CSS, and vanilla JavaScript. Search for a city or place to geocode it, view current weather on an interactive map, save favorite places, and copy a weather summary to share.
 
+## OpenWeatherMap API Key Setup
+
+1. Create a free account at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up).
+2. Sign in and open the **API keys** page in your account.
+3. Copy your API key. New keys may take a little while to activate.
+4. In `app.js`, replace the value of `WEATHER_API_KEY` with your key:
+
+   ```js
+   const WEATHER_API_KEY = "YOUR_API_KEY";
+
 ## Run locally
 
 1. Install or open a code editor and place the project files in one folder.
